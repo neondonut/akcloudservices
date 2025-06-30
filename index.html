@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <title>AK Cloud Services - Professional Dev & Cloud Solutions</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f0f4f8;
+      background: linear-gradient(135deg, #f5f9ff 25%, #e6f0ff 100%);
       color: #333;
       min-height: 100vh;
       display: flex;
@@ -16,12 +18,11 @@
     header {
       background-color: #007acc;
       color: white;
-      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+      padding: 1.5rem 1.5rem 1rem 1.5rem;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       position: relative;
     }
-    /* Request a Quote button */
     #quote-btn {
       position: absolute;
       top: 1.5rem;
@@ -33,26 +34,33 @@
       font-weight: bold;
       border-radius: 4px;
       cursor: pointer;
+      transition: background 0.3s ease;
       z-index: 10;
     }
     #quote-btn:hover {
       background: #00457a;
     }
-    /* Email banner below the button */
     #quote-email {
       display: none;
       position: absolute;
-      top: 3.8rem; /* below the button */
+      top: 3.8rem;
       right: 1.5rem;
-      background: #00457a;
-      padding: 0.5rem 1rem;
+      background: rgba(255 255 255 / 0.15);
+      backdrop-filter: blur(6px);
+      padding: 0.4rem 0.8rem;
       border-radius: 4px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       white-space: nowrap;
+      color: #fff;
+      font-weight: 600;
+      text-align: left;
+      width: max-content;
+      max-width: 280px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
       z-index: 9;
     }
     #quote-email a {
-      color: #a8d0ff;
+      color: #cfe6ff;
       text-decoration: underline;
     }
     main {
@@ -72,7 +80,7 @@
       padding: 0;
     }
     li {
-      background: #e6f0ff;
+      background: #d8e6ff;
       margin: 0.5rem 0;
       padding: 1rem;
       border-radius: 8px;
@@ -80,23 +88,25 @@
       align-items: center;
       gap: 0.75rem;
       font-size: 1.1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
     img {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       flex-shrink: 0;
+      filter: drop-shadow(0 0 0.5px rgba(0,0,0,0.15));
     }
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #777;
-      border-top: 1px solid #ddd;
+      color: #555;
+      border-top: 1px solid #ccc;
       margin-top: auto;
-      background: #f0f4f8;
+      background: #f5f9ff;
     }
     a {
-      color: #007acc;
+      color: #005fa3;
       text-decoration: none;
     }
     a:hover {
@@ -120,7 +130,7 @@
         <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg" alt="Jenkins" /> DevOps Automation & CI/CD Pipelines</li>
         <li>
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/aws.svg" alt="AWS" />
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/azure.svg" alt="Azure" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftazure.svg" alt="Azure" />
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlecloud.svg" alt="Google Cloud" />
           Cloud Infrastructure Setup & Management
         </li>
