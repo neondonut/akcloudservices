@@ -7,7 +7,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f4f7f9;
+      background: #f0f4f8;
       color: #333;
       min-height: 100vh;
       display: flex;
@@ -16,12 +16,12 @@
     header {
       background-color: #007acc;
       color: white;
-      padding: 1.5rem;
+      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       position: relative;
     }
-    /* Button in top right */
+    /* Request a Quote button */
     #quote-btn {
       position: absolute;
       top: 1.5rem;
@@ -33,15 +33,27 @@
       font-weight: bold;
       border-radius: 4px;
       cursor: pointer;
+      z-index: 10;
     }
     #quote-btn:hover {
       background: #00457a;
     }
+    /* Email banner below the button */
     #quote-email {
       display: none;
-      margin-top: 0.5rem;
+      position: absolute;
+      top: 3.8rem; /* below the button */
+      right: 1.5rem;
+      background: #00457a;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
       font-size: 0.9rem;
-      color: #e0e0e0;
+      white-space: nowrap;
+      z-index: 9;
+    }
+    #quote-email a {
+      color: #a8d0ff;
+      text-decoration: underline;
     }
     main {
       max-width: 900px;
@@ -81,7 +93,7 @@
       color: #777;
       border-top: 1px solid #ddd;
       margin-top: auto;
-      background: #f4f7f9;
+      background: #f0f4f8;
     }
     a {
       color: #007acc;
@@ -96,7 +108,9 @@
   <header>
     <h1>AK Cloud Services - Professional Development & Cloud Solutions</h1>
     <button id="quote-btn" onclick="toggleEmail()">Request a Quote</button>
-    <div id="quote-email">Email: <a href="mailto:vakshitservices@gmail.com" style="color:#e0e0e0;">vakshitservices@gmail.com</a></div>
+    <div id="quote-email">
+      Email: <a href="mailto:vakshitservices@gmail.com">vakshitservices@gmail.com</a>
+    </div>
   </header>
   <main>
     <section>
@@ -130,11 +144,7 @@
   <script>
     function toggleEmail() {
       const emailDiv = document.getElementById('quote-email');
-      if (emailDiv.style.display === 'block') {
-        emailDiv.style.display = 'none';
-      } else {
-        emailDiv.style.display = 'block';
-      }
+      emailDiv.style.display = emailDiv.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 </body>
