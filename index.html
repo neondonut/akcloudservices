@@ -1,202 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AK Cloud Services - Professional Dev & Cloud Solutions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AK Cloud Services - Professional Cloud & DevOps Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1Cm1mqed7Pc1ULwdbV6Of1eqeTJ1iH25QV+0lMqD/jGpRk5K24KfpR9UUfda91Hc5/1rI2uQ6Hj7Bht2gI4VA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f9fbfd;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #005a9e;
+    }
 
-<!-- Font Awesome CSS CDN -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-pOeB46WSlYVVMT9Cr0OyAlQTnGG9MZbzG68PULmaFbYmZ1f2A3FEduh+9Zef6T9eM7cdm9hY3KhkdvNUp9ONqA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+    /* Navbar */
+    nav {
+      background-color: #004a99;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 2rem;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+    nav ul li a {
+      color: white;
+      font-weight: 600;
+    }
+    nav ul li a:hover {
+      color: #ff5e57;
+    }
+    nav button {
+      background-color: #ff5e57;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      color: white;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    nav button:hover {
+      background-color: #e94b43;
+    }
 
-<style>
-  /* Reset & base */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background: #f5f7fa;
-    color: #333;
-  }
-  a {
-    color: #007acc;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+    /* Hero */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 2rem;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      max-width: 700px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 500px;
+      margin-bottom: 2rem;
+    }
+    .hero button {
+      background-color: #ff5e57;
+      border: none;
+      padding: 0.8rem 2rem;
+      color: white;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      width: max-content;
+    }
+    .hero button:hover {
+      background-color: #e94b43;
+    }
 
-  /* Header */
-  header {
-    background: linear-gradient(90deg, #004d99, #007acc);
-    padding: 1rem 2rem;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  #quote-btn {
-    background-color: #004080;
-    border: none;
-    color: white;
-    padding: 0.5rem 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  #quote-btn:hover {
-    background-color: #003366;
-  }
+    /* Services Section */
+    #services {
+      max-width: 1100px;
+      margin: 3rem auto 5rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 1.8rem;
+    }
+    .service-card {
+      background-color: #e3f0ff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      color: #007acc;
+      flex-shrink: 0;
+      width: 50px;
+      text-align: center;
+    }
+    .service-text {
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: #004a99;
+    }
 
-  /* Quote email banner */
-  #quote-email {
-    background-color: #007acc;
-    color: white;
-    text-align: center;
-    padding: 0.6rem;
-    font-weight: 600;
-    font-size: 1rem;
-    display: none;
-  }
-  #quote-email a {
-    color: #ffd966;
-    font-weight: bold;
-  }
-  #quote-email a:hover {
-    color: #fff;
-  }
+    /* Contact Section */
+    #contact {
+      background-color: white;
+      max-width: 600px;
+      margin: 0 auto 5rem auto;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+    #contact h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: #004a99;
+    }
+    #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    #contact a {
+      font-weight: 700;
+      color: #ff5e57;
+      cursor: pointer;
+    }
+    #contact a:hover {
+      text-decoration: underline;
+    }
 
-  /* Main container */
-  main {
-    max-width: 900px;
-    margin: 2rem auto 4rem;
-    padding: 0 1rem;
-  }
+    /* Footer */
+    footer {
+      background-color: #004a99;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      user-select: none;
+    }
 
-  h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Services list */
-  ul.services-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 2rem 0;
-  }
-  ul.services-list li {
-    background-color: #dbe9fc;
-    color: #004080;
-    font-weight: 600;
-    padding: 1rem 1.2rem;
-    margin-bottom: 0.8rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  ul.services-list li i {
-    font-size: 1.5rem;
-  }
-
-  /* Contact button */
-  #contact-btn {
-    display: inline-block;
-    background-color: #007acc;
-    color: white;
-    border: none;
-    padding: 0.7rem 1.4rem;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  #contact-btn:hover {
-    background-color: #005f99;
-  }
-
-  /* Contact info */
-  #contact-info {
-    margin-top: 1rem;
-    font-size: 1rem;
-    display: none;
-    background-color: #e5f0ff;
-    padding: 1rem 1.4rem;
-    border-radius: 6px;
-    color: #004080;
-  }
-  #contact-info a {
-    font-weight: 600;
-  }
-</style>
+    /* Responsive */
+    @media(max-width: 600px) {
+      nav ul {
+        gap: 1rem;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      #services {
+        padding: 0 1rem;
+      }
+      .service-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>AK Cloud Services</h1>
-  <button id="quote-btn">Request a Quote</button>
-</header>
-
-<div id="quote-email">
-  Email: <a href="mailto:vakshitservices@gmail.com">vakshitservices@gmail.com</a>
-</div>
-
-<main>
-  <section>
-    <h2>What We Offer</h2>
-    <ul class="services-list">
-      <li><i class="fas fa-code"></i> Software Development & Consulting</li>
-      <li><i class="fas fa-cogs"></i> DevOps Automation & CI/CD Pipelines</li>
-      <li><i class="fas fa-cloud"></i> Cloud Infrastructure Setup & Management</li>
-      <li><i class="fas fa-chart-line"></i> Application Monitoring & Support</li>
-      <li><i class="fas fa-chalkboard-teacher"></i> Training and Knowledge Transfer</li>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">AK Cloud Services</div>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Request a Quote
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Professional Cloud & DevOps Solutions</h1>
+    <p>Delivering scalable and secure cloud infrastructure to accelerate your business.</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
   </section>
 
-  <section>
-    <button id="contact-btn">Contact Me</button>
-    <div id="contact-info">
-      <p>Email: <a href="mailto:vakshitservices@gmail.com">vakshitservices@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/kajalsinhmar</a></p>
+  <!-- Services -->
+  <section id="services">
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-brands fa-python"></i></div>
+      <div class="service-text">Software Development & Consulting</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-brands fa-git-alt"></i></div>
+      <div class="service-text">DevOps Automation & CI/CD Pipelines</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-brands fa-aws"></i></div>
+      <div class="service-text">Cloud Infrastructure Setup & Management</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+      <div class="service-text">Application Monitoring & Support</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+      <div class="service-text">Training and Knowledge Transfer</div>
     </div>
   </section>
-</main>
 
-<script>
-  const quoteBtn = document.getElementById('quote-btn');
-  const quoteEmail = document.getElementById('quote-email');
-  quoteBtn.addEventListener('click', () => {
-    if (quoteEmail.style.display === 'block') {
-      quoteEmail.style.display = 'none';
-    } else {
-      quoteEmail.style.display = 'block';
-      // Scroll to top to see email banner
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  });
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:vakshitservices@gmail.com">vakshitservices@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/kajalsinhmar</a></p>
+    <p>GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener noreferrer">github.com/kajalvaidhyula</a></p>
+  </section>
 
-  const contactBtn = document.getElementById('contact-btn');
-  const contactInfo = document.getElementById('contact-info');
-  contactBtn.addEventListener('click', () => {
-    if (contactInfo.style.display === 'block') {
-      contactInfo.style.display = 'none';
-    } else {
-      contactInfo.style.display = 'block';
-      contactInfo.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-</script>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 AK Cloud Services. All rights reserved.
+  </footer>
 
 </body>
 </html>
