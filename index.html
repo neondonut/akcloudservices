@@ -88,12 +88,13 @@
       object-fit: cover;
       display: block;
       border-radius: 12px;
+      filter: brightness(0.85);
     }
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(255, 255, 255, 0.4); /* subtle white overlay */
+      background: rgba(255, 255, 255, 0.3); /* subtle white overlay */
       border-radius: 12px;
       pointer-events: none;
     }
@@ -112,11 +113,13 @@
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 0.5rem;
+      color: #111827;
     }
     .hero-text p {
       font-size: 1.1rem;
       font-weight: 500;
       margin-bottom: 1.8rem;
+      color: #2d3748;
     }
     .hero-text button {
       background-color: #ff6f61;
