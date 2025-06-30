@@ -2,84 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AK Cloud Services - Professional Dev & Cloud Solutions</title>
+  <title>AK Cloud Services</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f9fafb;
-      color: #333;
-    }
-    header {
-      background-color: #007acc;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h1, h2 {
-      margin-bottom: 0.5rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      background: #e6f0ff;
-      margin: 0.5rem 0;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
-      border-top: 1px solid #ddd;
-      margin-top: 4rem;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 1rem; }
+    header { background: #007acc; color: white; padding: 1rem; text-align: center; }
+    section { margin-top: 2rem; }
+    ul { list-style: none; padding: 0; }
+    li { background: #e6f0ff; margin: 0.5rem 0; padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.5rem; }
+    img { width: 24px; height: 24px; }
+    .contact-info { display: none; margin-top: 0.5rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
   </style>
 </head>
 <body>
   <header>
-    <h1>AK Cloud Services - Professional Development & Cloud Solutions</h1>
+    <h1>AK Cloud Services</h1>
   </header>
-  <main>
-    <section>
-      <h2>What We Offer</h2>
-      <ul>
-        <li>Software Development & Consulting</li>
-        <li>DevOps Automation & CI/CD Pipelines</li>
-        <li>Cloud Infrastructure Setup & Management (Azure, AWS, GCP)</li>
-        <li>Application Monitoring & Support</li>
-        <li>Training and Knowledge Transfer</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Contact Me</h2>
-      <p>
-        Email: <a href="mailto:kajalvaidhyula@gmail.com">kajalvaidhyula@gmail.com</a><br />
-        LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/kajalsinhmar</a><br />
-        GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener noreferrer">github.com/kajalvaidhyula</a>
-      </p>
-    </section>
-  </main>
-  <footer>
+
+  <section>
+    <h2>What We Offer</h2>
+    <ul>
+      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" /> Software Development & Consulting</li>
+      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/azure.svg" alt="Azure" /> DevOps Automation & CI/CD Pipelines</li>
+      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/aws.svg" alt="AWS" /> Cloud Infrastructure Setup & Management</li>
+      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" alt="Docker" /> Application Monitoring & Support</li>
+      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg" alt="Jenkins" /> Training and Knowledge Transfer</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <button onclick="toggleContact()">Show Contact Info</button>
+    <div id="contact-info" class="contact-info">
+      <p>Email: <a href="mailto:kajalvaidhyula@gmail.com">kajalvaidhyula@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/kajalsinhmar</a></p>
+      <p>GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener noreferrer">github.com/kajalvaidhyula</a></p>
+    </div>
+  </section>
+
+  <footer style="margin-top: 3rem; text-align: center; color: #555;">
     &copy; 2025 AK Cloud Services
   </footer>
+
+  <script>
+    function toggleContact() {
+      const info = document.getElementById('contact-info');
+      info.style.display = info.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
