@@ -9,19 +9,31 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #f5f9ff 25%, #e6f0ff 100%);
+      background: linear-gradient(135deg, #f0f4f9 0%, #d9e2f1 100%);
       color: #333;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      position: relative;
+      /* subtle diagonal dots pattern */
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 1px),
+        radial-gradient(circle at 6px 6px, rgba(0,0,0,0.05) 1px, transparent 1px);
+      background-size: 10px 10px;
     }
     header {
       background-color: #007acc;
       color: white;
-      padding: 1.5rem 1.5rem 1rem 1.5rem;
+      padding: 3rem 1.5rem 2rem 1.5rem;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       position: relative;
+      overflow: visible;
+      /* wave background */
+      background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="120" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg"><path fill="%23007acc" fill-opacity="0.15" d="M0,64L60,85.3C120,107,240,149,360,138.7C480,128,600,64,720,69.3C840,75,960,149,1080,160C1200,171,1320,117,1380,90.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: cover;
     }
     #quote-btn {
       position: absolute;
@@ -45,19 +57,30 @@
       position: absolute;
       top: 3.8rem;
       right: 1.5rem;
-      background: rgba(255 255 255 / 0.15);
-      backdrop-filter: blur(6px);
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
+      background: rgba(0, 95, 163, 0.85);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
       font-size: 0.85rem;
       white-space: nowrap;
-      color: #fff;
+      color: white;
       font-weight: 600;
       text-align: left;
       width: max-content;
       max-width: 280px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
       z-index: 9;
+    }
+    #quote-email p {
+      margin: 0 0 0.2rem 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    #quote-email span {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #d4e8ff;
+      display: block;
+      margin-bottom: 0.2rem;
     }
     #quote-email a {
       color: #cfe6ff;
@@ -119,6 +142,8 @@
     <h1>AK Cloud Services - Professional Development & Cloud Solutions</h1>
     <button id="quote-btn" onclick="toggleEmail()">Request a Quote</button>
     <div id="quote-email">
+      <p>AK Services</p>
+      <span>Professional Dev & Cloud Solutions</span>
       Email: <a href="mailto:vakshitservices@gmail.com">vakshitservices@gmail.com</a>
     </div>
   </header>
@@ -129,12 +154,12 @@
         <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" /> Software Development & Consulting</li>
         <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg" alt="Jenkins" /> DevOps Automation & CI/CD Pipelines</li>
         <li>
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/aws.svg" alt="AWS" />
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftazure.svg" alt="Azure" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/aws.svg" alt="AWS" />
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlecloud.svg" alt="Google Cloud" />
           Cloud Infrastructure Setup & Management
         </li>
-        <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" alt="Docker" /> Application Monitoring & Support</li>
+        <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/prometheus.svg" alt="Prometheus" /> Application Monitoring & Support</li>
         <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg" alt="Jenkins" /> Training and Knowledge Transfer</li>
       </ul>
     </section>
