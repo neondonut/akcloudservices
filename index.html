@@ -2,53 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AK Cloud Services</title>
+  <title>AK Cloud Services - Professional Dev & Cloud Solutions</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 1rem; }
-    header { background: #007acc; color: white; padding: 1rem; text-align: center; }
-    section { margin-top: 2rem; }
-    ul { list-style: none; padding: 0; }
-    li { background: #e6f0ff; margin: 0.5rem 0; padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 0.5rem; }
-    img { width: 24px; height: 24px; }
-    .contact-info { display: none; margin-top: 0.5rem; }
-    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f7f9;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      flex-grow: 1;
+    }
+    h1, h2 {
+      margin-bottom: 0.5rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #e6f0ff;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.1rem;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #ddd;
+      margin-top: auto;
+      background: #f4f7f9;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>AK Cloud Services</h1>
+    <h1>AK Cloud Services - Professional Development & Cloud Solutions</h1>
   </header>
-
-  <section>
-    <h2>What We Offer</h2>
-    <ul>
-      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" /> Software Development & Consulting</li>
-      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/azure.svg" alt="Azure" /> DevOps Automation & CI/CD Pipelines</li>
-      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/aws.svg" alt="AWS" /> Cloud Infrastructure Setup & Management</li>
-      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" alt="Docker" /> Application Monitoring & Support</li>
-      <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg" alt="Jenkins" /> Training and Knowledge Transfer</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Contact Me</h2>
-    <button onclick="toggleContact()">Show Contact Info</button>
-    <div id="contact-info" class="contact-info">
-      <p>Email: <a href="mailto:kajalvaidhyula@gmail.com">kajalvaidhyula@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/kajalsinhmar</a></p>
-      <p>GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener noreferrer">github.com/kajalvaidhyula</a></p>
-    </div>
-  </section>
-
-  <footer style="margin-top: 3rem; text-align: center; color: #555;">
+  <main>
+    <section>
+      <h2>What We Offer</h2>
+      <ul>
+        <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" /> Software Development & Consulting</li>
+        <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg" alt="Jenkins" /> DevOps Automation & CI/CD Pipelines</li>
+        <li>
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/aws.svg" alt="AWS" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/azure.svg" alt="Azure" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlecloud.svg" alt="Google Cloud" />
+          Cloud Infrastructure Setup & Management
+        </li>
+        <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" alt="Docker" /> Application Monitoring & Support</li>
+        <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg" alt="Jenkins" /> Training and Knowledge Transfer</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Contact Me</h2>
+      <p>
+        Email: <a href="mailto:kajalvaidhyula@gmail.com">kajalvaidhyula@gmail.com</a><br />
+        LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/kajalsinhmar</a><br />
+        GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener noreferrer">github.com/kajalvaidhyula</a>
+      </p>
+    </section>
+  </main>
+  <footer>
     &copy; 2025 AK Cloud Services
   </footer>
-
-  <script>
-    function toggleContact() {
-      const info = document.getElementById('contact-info');
-      info.style.display = info.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
 </body>
 </html>
