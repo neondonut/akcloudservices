@@ -4,271 +4,196 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AK Cloud Services - Professional Cloud & DevOps Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-p1Cm1mqed7Pc1ULwdbV6Of1eqeTJ1iH25QV+0lMqD/jGpRk5K24KfpR9UUfda91Hc5/1rI2uQ6Hj7Bht2gI4VA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
   <style>
-    /* Reset and base */
-    * {
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f9fbfd;
+      background: #f5f7fa;
       color: #333;
-      line-height: 1.6;
     }
-    a {
-      color: #007acc;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #005a9e;
-    }
-
-    /* Navbar */
-    nav {
-      background-color: #004a99;
+    header {
+      background-color: #007acc;
+      padding: 1rem 2rem;
       color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
     }
-    nav .logo {
-      font-weight: 700;
+    header .logo {
+      font-weight: bold;
       font-size: 1.5rem;
     }
-    nav ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 2rem;
-    }
-    nav ul li {
-      font-weight: 600;
-    }
-    nav ul li a {
+    header nav a {
       color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
       font-weight: 600;
     }
-    nav ul li a:hover {
-      color: #ff5e57;
+    header nav a:hover {
+      text-decoration: underline;
     }
-    nav button {
-      background-color: #ff5e57;
+    header .cta-button {
+      background-color: #e94b35;
       border: none;
-      padding: 0.5rem 1.2rem;
-      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
       font-weight: 600;
-      border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    nav button:hover {
-      background-color: #e94b43;
+    header .cta-button:hover {
+      background-color: #c0392b;
     }
-
-    /* Hero */
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
     .hero {
-      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-      height: 70vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 2rem;
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
       color: white;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      padding: 6rem 2rem 4rem;
+      border-radius: 10px;
+      position: relative;
+      margin-bottom: 3rem;
     }
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      max-width: 700px;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      max-width: 450px;
+      font-weight: 700;
     }
     .hero p {
-      font-size: 1.3rem;
-      max-width: 500px;
-      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      max-width: 400px;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
     }
     .hero button {
-      background-color: #ff5e57;
+      background-color: #e94b35;
       border: none;
-      padding: 0.8rem 2rem;
-      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 5px;
       font-weight: 600;
-      border-radius: 8px;
       cursor: pointer;
-      font-size: 1.1rem;
-      width: max-content;
+      color: white;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
     }
     .hero button:hover {
-      background-color: #e94b43;
+      background-color: #c0392b;
     }
-
-    /* Services Section */
-    #services {
-      max-width: 1100px;
-      margin: 3rem auto 5rem auto;
-      padding: 0 2rem;
+    section.services h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+    .service-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
     }
-    .service-card {
-      background-color: #e3f0ff;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .service-item {
+      background-color: #d9e9ff;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+      font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 1.2rem;
-      transition: transform 0.3s ease;
-      cursor: default;
+      gap: 0.8rem;
     }
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-    .service-icon {
-      font-size: 2.5rem;
-      color: #007acc;
+    .service-item svg {
+      width: 24px;
+      height: 24px;
       flex-shrink: 0;
-      width: 50px;
-      text-align: center;
+      fill: #007acc;
     }
-    .service-text {
-      font-weight: 600;
-      font-size: 1.15rem;
-      color: #004a99;
-    }
-
-    /* Contact Section */
-    #contact {
+    section.contact {
+      margin-top: 4rem;
       background-color: white;
-      max-width: 600px;
-      margin: 0 auto 5rem auto;
-      padding: 2rem;
+      padding: 2rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     }
-    #contact h2 {
+    section.contact h2 {
       margin-bottom: 1rem;
-      font-size: 1.8rem;
-      color: #004a99;
-    }
-    #contact p {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-    #contact a {
       font-weight: 700;
-      color: #ff5e57;
-      cursor: pointer;
+      font-size: 1.6rem;
+      color: #222;
     }
-    #contact a:hover {
+    section.contact p {
+      margin-bottom: 1.8rem;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
+    section.contact a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    section.contact a:hover {
       text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #004a99;
-      color: white;
-      text-align: center;
-      padding: 1rem 2rem;
-      font-size: 0.9rem;
-      user-select: none;
-    }
-
-    /* Responsive */
-    @media(max-width: 600px) {
-      nav ul {
-        gap: 1rem;
-      }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      #services {
-        padding: 0 1rem;
-      }
-      .service-card {
-        padding: 1.5rem;
-      }
     }
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav>
+  <header>
     <div class="logo">AK Cloud Services</div>
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      Request a Quote
-    </button>
-  </nav>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get a Free Consultation</button>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Professional Cloud & DevOps Solutions</h1>
-    <p>Delivering scalable and secure cloud infrastructure to accelerate your business.</p>
-    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
-  </section>
+  <main>
+    <section class="hero">
+      <h1>Transform Your Business with Expert Cloud & DevOps Solutions</h1>
+      <p>Scalable, secure, and reliable cloud infrastructure tailored to your unique needs.</p>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get a Free Consultation</button>
+    </section>
 
-  <!-- Services -->
-  <section id="services">
-    <div class="service-card">
-      <div class="service-icon"><i class="fa-brands fa-python"></i></div>
-      <div class="service-text">Software Development & Consulting</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fa-brands fa-git-alt"></i></div>
-      <div class="service-text">DevOps Automation & CI/CD Pipelines</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fa-brands fa-aws"></i></div>
-      <div class="service-text">Cloud Infrastructure Setup & Management</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-      <div class="service-text">Application Monitoring & Support</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fa-solid fa-book-open-reader"></i></div>
-      <div class="service-text">Training and Knowledge Transfer</div>
-    </div>
-  </section>
+    <section id="services" class="services">
+      <h2>What We Offer</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.371 0 0 5.371 0 12c0 6.628 5.371 12 12 12 6.629 0 12-5.372 12-12 0-6.629-5.371-12-12-12zm0 21.273c-1.345 0-2.565-.456-3.566-1.223l1.155-1.143c.597.422 1.351.669 2.411.669 1.526 0 2.665-.719 2.665-1.927 0-1.133-.93-1.607-2.163-2.3-1.61-.905-2.68-1.975-2.68-3.425 0-1.75 1.335-3.02 3.741-3.02 1.404 0 2.42.467 3.202 1.084l-1.178 1.18c-.506-.337-1.015-.534-1.95-.534-1.379 0-2.24.848-2.24 1.713 0 1.093 1.04 1.517 2.277 2.15 1.58.828 2.68 1.79 2.68 3.55 0 1.924-1.675 3.225-4.162 3.225z"></path></svg>
+          Software Development & Consulting
+        </div>
+        <div class="service-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.59 2 4 5.59 4 10c0 1.52.58 2.92 1.53 3.98l-1.46 4.84c-.1.33.02.67.29.88.25.19.59.22.87.07l4.15-2.39c.94.56 2.03.87 3.18.87 4.41 0 8-3.59 8-8s-3.59-8-8-8zm0 14c-.71 0-1.38-.2-1.96-.55l1.57-2.41-1.92-.56-.73-2.21c-.05-.15-.04-.31.05-.44.07-.11.19-.18.32-.18h.18l1.93.58 1.61-1.78c.06-.06.14-.1.23-.11.13-.01.27.06.36.18l2.3 3.56c.02.03.04.07.04.11 0 .11-.09.2-.2.2h-1.91l-1.71 2.63c-.52.28-1.11.44-1.73.44z"></path></svg>
+          DevOps Automation & CI/CD Pipelines
+        </div>
+        <div class="service-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5v14h18V5H3zm9 13a5.5 5.5 0 01-5.5-5.5A5.5 5.5 0 0112 7a5.5 5.5 0 015.5 5.5A5.5 5.5 0 0112 18zm0-9a3.5 3.5 0 00-3.5 3.5A3.5 3.5 0 0012 16a3.5 3.5 0 003.5-3.5A3.5 3.5 0 0012 9z"></path></svg>
+          Cloud Infrastructure Setup & Management
+        </div>
+        <div class="service-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 00-3.3 17.31c.52.09.71-.23.71-.51 0-.25-.01-.91-.01-1.79-2.89.63-3.49-1.39-3.49-1.39-.48-1.22-1.17-1.54-1.17-1.54-.96-.66.07-.65.07-.65 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.47 1.15 3.07.88.1-.69.37-1.15.68-1.41-2.31-.26-4.74-1.15-4.74-5.12 0-1.13.39-2.06 1.03-2.79-.11-.25-.45-1.29.1-2.68 0 0 .84-.27 2.75 1.05a9.52 9.52 0 015 0c1.91-1.32 2.75-1.05 2.75-1.05.56 1.39.22 2.43.11 2.68.64.73 1.03 1.66 1.03 2.79 0 3.98-2.44 4.86-4.76 5.11.38.33.72.98.72 1.98 0 1.43-.01 2.59-.01 2.94 0 .28.19.61.72.51A9 9 0 0012 3z"></path></svg>
+          Application Monitoring & Support
+        </div>
+        <div class="service-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 4v16H6V4h12zm0-2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM9 15h6v2H9v-2zm0-5h6v2H9V10z"></path></svg>
+          Training and Knowledge Transfer
+        </div>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:vakshitservices@gmail.com">vakshitservices@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/kajalsinhmar</a></p>
-    <p>GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener noreferrer">github.com/kajalvaidhyula</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 AK Cloud Services. All rights reserved.
-  </footer>
-
+    <section id="contact" class="contact">
+      <h2>Ready to Elevate Your Cloud Journey?</h2>
+      <p>Contact us for a personalized plan and pricing tailored to your business goals.</p>
+      <p>Email: <a href="mailto:vakshitservices@gmail.com">vakshitservices@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener">www.linkedin.com/in/kajalsinhmar</a></p>
+      <p>GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener">github.com/kajalvaidhyula</a></p>
+    </section>
+  </main>
 </body>
 </html>
