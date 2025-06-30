@@ -19,6 +19,29 @@
       padding: 1.5rem;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    /* Button in top right */
+    #quote-btn {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: #005fa3;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #quote-btn:hover {
+      background: #00457a;
+    }
+    #quote-email {
+      display: none;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #e0e0e0;
     }
     main {
       max-width: 900px;
@@ -72,6 +95,8 @@
 <body>
   <header>
     <h1>AK Cloud Services - Professional Development & Cloud Solutions</h1>
+    <button id="quote-btn" onclick="toggleEmail()">Request a Quote</button>
+    <div id="quote-email">Email: <a href="mailto:vakshitservices@gmail.com" style="color:#e0e0e0;">vakshitservices@gmail.com</a></div>
   </header>
   <main>
     <section>
@@ -101,5 +126,16 @@
   <footer>
     &copy; 2025 AK Cloud Services
   </footer>
+
+  <script>
+    function toggleEmail() {
+      const emailDiv = document.getElementById('quote-email');
+      if (emailDiv.style.display === 'block') {
+        emailDiv.style.display = 'none';
+      } else {
+        emailDiv.style.display = 'block';
+      }
+    }
+  </script>
 </body>
 </html>
