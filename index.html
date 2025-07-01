@@ -12,12 +12,12 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #fef9f4 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"><circle cx="30" cy="30" r="1" fill="%23d9d2c1"/></svg>') repeat;
-      color: #333333;
+      background: #f5f3ec url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"><circle cx="30" cy="30" r="1" fill="%23cbd5e0"/></svg>') repeat;
+      color: #4a4237;
       scroll-behavior: smooth;
     }
     a {
-      color: #836953;
+      color: #a6825e;
       text-decoration: none;
     }
     a:hover {
@@ -27,7 +27,7 @@
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      background-color: #b69f76; /* Creamy brown */
+      background-color: #a6825e;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -36,178 +36,180 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
     .logo {
-      color: #fff7e6;
+      color: #fff9f1;
       font-weight: 700;
-      font-size: 1.5rem;
-      letter-spacing: 0.04em;
+      font-size: 1.4rem;
+      letter-spacing: 0.02em;
       cursor: default;
-      font-family: 'Segoe UI Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    nav {
-      display: flex;
-      align-items: center;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 0 0 10px #ff7ae6;
     }
     nav a {
-      color: #fff7e6;
+      color: #fff9f1;
       margin-left: 2rem;
       font-weight: 600;
       font-size: 1rem;
       transition: color 0.3s ease;
+      font-family: 'Courier New', Courier, monospace;
     }
     nav a:hover {
-      color: #ddcba4;
+      color: #ff7ae6;
+      text-shadow: 0 0 6px #ff7ae6;
     }
     .btn-cta {
-      background-color: #836953;
+      background-color: #ff48c4;
       border: none;
-      padding: 0.6rem 1.6rem;
-      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
       font-weight: 700;
-      color: #fff7e6;
+      color: white;
       cursor: pointer;
       transition: background-color 0.3s ease;
       margin-left: 2rem;
       white-space: nowrap;
-      box-shadow: 0 4px 10px rgba(131, 105, 83, 0.5);
+      font-family: 'Courier New', Courier, monospace;
+      box-shadow: 0 0 8px #ff48c4;
     }
     .btn-cta:hover {
-      background-color: #a28f6f;
-      box-shadow: 0 6px 14px rgba(131, 105, 83, 0.7);
+      background-color: #e03da6;
+      box-shadow: 0 0 12px #e03da6;
     }
     /* Main container */
     main {
-      max-width: 900px;
+      max-width: 960px;
       margin: 100px auto 3rem;
       padding: 0 1rem;
     }
     /* Hero */
     .hero {
       position: relative;
-      border-radius: 14px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       margin-bottom: 3rem;
-      height: 400px;
-      background: url('https://user-images.githubusercontent.com/91890463/191498310-6dd0e96c-7c9d-4309-863d-c2446a65db9b.jpg') no-repeat center center/cover;
+      height: 380px;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+      filter: brightness(0.8);
     }
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(255 255 255 / 0.5);
-      border-radius: 14px;
+      background: rgba(245, 243, 236, 0.5); /* subtle creamy overlay */
+      border-radius: 12px;
       pointer-events: none;
     }
     .hero-text {
       position: absolute;
-      top: 50px;
-      left: 40px;
+      top: 40px;
+      left: 30px;
       max-width: 520px;
-      color: #4a3f2b;
-      text-shadow:
-        1px 1px 2px rgba(255 255 255 / 0.8);
-      font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
+      color: #4a4237;
+      text-shadow: 1px 1px 3px rgba(255 255 255 / 0.9);
+      font-family: 'Courier New', Courier, monospace;
     }
     .hero-text h1 {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       font-weight: 800;
       line-height: 1.1;
-      margin-bottom: 1rem;
-      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
     }
     .hero-text p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 500;
-      margin-bottom: 2rem;
-      line-height: 1.4;
+      margin-bottom: 1.8rem;
     }
     .hero-text button {
-      background-color: #836953;
+      background-color: #ff48c4;
       border: none;
-      padding: 0.85rem 1.8rem;
-      border-radius: 8px;
+      padding: 0.7rem 1.4rem;
+      border-radius: 6px;
       font-weight: 700;
       cursor: pointer;
-      color: #fff7e6;
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      color: white;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
       white-space: nowrap;
-      box-shadow: 0 4px 14px rgba(131, 105, 83, 0.5);
+      box-shadow: 0 0 8px #ff48c4;
     }
     .hero-text button:hover {
-      background-color: #a28f6f;
-      box-shadow: 0 6px 18px rgba(131, 105, 83, 0.7);
+      background-color: #e03da6;
+      box-shadow: 0 0 12px #e03da6;
     }
     /* Services */
     section.services h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 700;
-      margin-bottom: 2rem;
-      color: #4a3f2b;
+      margin-bottom: 1.8rem;
+      color: #4a4237;
+      font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      font-family: 'Segoe UI Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      letter-spacing: 0.06em;
+      text-shadow: 0 0 8px #ff7ae6;
     }
     .service-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.4rem;
     }
     .service-item {
-      background-color: #ece5da;
-      border-radius: 12px;
-      padding: 1.8rem 2rem;
+      background-color: #f0e6ff;
+      border-radius: 10px;
+      padding: 1.2rem 1.6rem;
       font-weight: 700;
-      color: #4a3f2b;
+      color: #4a3a7a;
       display: flex;
       align-items: center;
-      gap: 1.2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      gap: 1rem;
+      box-shadow: 0 3px 7px rgba(74, 58, 122, 0.2);
       transition: box-shadow 0.3s ease;
       cursor: default;
-      font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Courier New', Courier, monospace;
     }
     .service-item:hover {
-      box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+      box-shadow: 0 7px 15px rgba(74, 58, 122, 0.4);
     }
     .service-item svg {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       flex-shrink: 0;
-      fill: #4a3f2b;
+      fill: #4a3a7a;
     }
     /* Contact */
     section.contact {
-      margin-top: 5rem;
-      background-color: #ece5da;
-      padding: 2.5rem 3rem;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      margin-top: 4rem;
+      background-color: white;
+      padding: 2rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
       max-width: 520px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      color: #4a3f2b;
-      font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
+      color: #4a4237;
+      font-family: 'Courier New', Courier, monospace;
     }
     section.contact h2 {
-      margin-bottom: 1.6rem;
+      margin-bottom: 1rem;
       font-weight: 800;
-      font-size: 2rem;
-      color: #4a3f2b;
-      font-family: 'Segoe UI Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      letter-spacing: 0.05em;
+      font-size: 1.8rem;
+      color: #4a4237;
     }
     section.contact p {
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.6rem;
       font-weight: 500;
-      font-size: 1.1rem;
-      line-height: 1.5;
+      font-size: 1rem;
+      line-height: 1.4;
     }
     section.contact a {
-      color: #836953;
+      color: #a6825e;
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       text-decoration: none;
     }
     section.contact a:hover {
@@ -218,7 +220,7 @@
       header nav {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.8rem;
       }
       header .btn-cta {
         margin-left: 0;
@@ -229,10 +231,10 @@
         margin: 120px 1rem 3rem;
       }
       .hero-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       .hero-text p {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .service-list {
         grid-template-columns: 1fr;
@@ -245,16 +247,17 @@
     <div class="logo">NeonDonut</div>
     <nav>
       <a href="#services">Services</a>
-      <button class="btn-cta" onclick="window.location.href='mailto:studio@neondonut.tech?subject=Request a Quote from NeonDonut'">Request a Quote</button>
+      <button class="btn-cta" onclick="window.location.href='mailto:studio@neondonut.tech?subject=Request a Quote'">Request a Quote</button>
     </nav>
   </header>
 
   <main>
     <section class="hero">
+      <img src="https://user-images.githubusercontent.com/91890463/191498310-6dd0e96c-7c9d-4309-863d-c2446a65db9b.jpg" alt="NeonDonut" />
       <div class="hero-text">
         <h1>Transform Your Business with Expert Cloud & DevOps Solutions</h1>
         <p>Scalable, secure, and reliable cloud infrastructure tailored to your unique needs.</p>
-        <button onclick="window.location.href='mailto:studio@neondonut.tech?subject=Request a Quote from NeonDonut'">Request a Quote</button>
+        <button onclick="window.location.href='mailto:studio@neondonut.tech?subject=Request a Quote'">Request a Quote</button>
       </div>
     </section>
 
@@ -282,14 +285,6 @@
           Training and Knowledge Transfer
         </div>
       </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <h2>Ready to Elevate Your Cloud Journey?</h2>
-      <p>Contact us for a personalized plan and pricing tailored to your business goals.</p>
-      <p>Email: <a href="mailto:studio@neondonut.tech">studio@neondonut.tech</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener">linkedin.com/in/kajalsinhmar</a></p>
-      <p>GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener">github.com/kajalvaidhyula</a></p>
     </section>
   </main>
 </body>
