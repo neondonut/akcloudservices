@@ -5,239 +5,214 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NeonDonut - Expert Cloud & DevOps Solutions</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
     /* Reset and base */
     *, *::before, *::after {
       box-sizing: border-box;
     }
     body {
-      font-family: 'Share Tech Mono', monospace, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #1b0035 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"><circle cx="30" cy="30" r="1" fill="%23606"/></svg>') repeat;
-      color: #ffd1f9;
+      background: #fef9f4 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"><circle cx="30" cy="30" r="1" fill="%23d9d2c1"/></svg>') repeat;
+      color: #333333;
       scroll-behavior: smooth;
-      min-height: 100vh;
     }
     a {
-      color: #ff77ff;
+      color: #836953;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
     a:hover {
-      color: #ff39ff;
       text-decoration: underline;
     }
-
     /* Header */
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      background-color: #31004f;
+      background-color: #b69f76; /* Creamy brown */
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1rem 2rem;
       z-index: 1000;
-      box-shadow: 0 2px 8px rgba(255,0,255,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .logo {
+      color: #fff7e6;
       font-weight: 700;
-      font-size: 1.4rem;
-      letter-spacing: 0.05em;
-      color: #ff88ff;
-      font-family: 'Share Tech Mono', monospace;
-      text-shadow:
-        0 0 5px #ff33ff,
-        0 0 10px #ff33ff,
-        0 0 20px #ff00ff,
-        0 0 30px #ff00ff;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      cursor: default;
+      font-family: 'Segoe UI Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     nav {
       display: flex;
       align-items: center;
-      gap: 1.8rem;
-      font-weight: 600;
-      font-family: 'Share Tech Mono', monospace;
     }
     nav a {
-      color: #ff99ff;
+      color: #fff7e6;
+      margin-left: 2rem;
+      font-weight: 600;
       font-size: 1rem;
-      text-shadow:
-        0 0 3px #ff66ff,
-        0 0 5px #ff66ff;
+      transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #ff33ff;
-      text-shadow:
-        0 0 8px #ff33ff,
-        0 0 15px #ff33ff;
+      color: #ddcba4;
     }
     .btn-cta {
-      background: linear-gradient(45deg, #ff33ff, #ff66ff);
+      background-color: #836953;
       border: none;
-      padding: 0.5rem 1.5rem;
-      border-radius: 8px;
+      padding: 0.6rem 1.6rem;
+      border-radius: 6px;
       font-weight: 700;
-      color: #fff;
+      color: #fff7e6;
       cursor: pointer;
-      font-family: 'Share Tech Mono', monospace;
-      box-shadow:
-        0 0 5px #ff33ff,
-        0 0 15px #ff33ff,
-        0 0 25px #ff66ff;
-      transition: background 0.3s ease;
+      transition: background-color 0.3s ease;
+      margin-left: 2rem;
       white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(131, 105, 83, 0.5);
     }
     .btn-cta:hover {
-      background: linear-gradient(45deg, #ff66ff, #ff00ff);
-      box-shadow:
-        0 0 10px #ff00ff,
-        0 0 20px #ff00ff,
-        0 0 40px #ff33ff;
+      background-color: #a28f6f;
+      box-shadow: 0 6px 14px rgba(131, 105, 83, 0.7);
     }
-
     /* Main container */
     main {
-      max-width: 960px;
-      margin: 90px auto 3rem;
+      max-width: 900px;
+      margin: 100px auto 3rem;
       padding: 0 1rem;
-      color: #ffd1f9;
     }
-
     /* Hero */
     .hero {
       position: relative;
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 10px 40px rgba(255, 20, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
       margin-bottom: 3rem;
-      height: 380px;
-      background: linear-gradient(135deg, #42006c, #8a00cc);
-      display: flex;
-      align-items: center;
-      padding: 2rem 3rem;
-      color: #ffb6ff;
-      font-family: 'Share Tech Mono', monospace;
-      text-shadow:
-        0 0 10px #ff33ff,
-        0 0 20px #ff00ff;
+      height: 400px;
+      background: url('https://user-images.githubusercontent.com/91890463/191498310-6dd0e96c-7c9d-4309-863d-c2446a65db9b.jpg') no-repeat center center/cover;
     }
-    .hero img {
-      display: none; /* hidden since we use gradient background */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255 255 255 / 0.5);
+      border-radius: 14px;
+      pointer-events: none;
     }
     .hero-text {
-      max-width: 580px;
-      font-weight: 700;
+      position: absolute;
+      top: 50px;
+      left: 40px;
+      max-width: 520px;
+      color: #4a3f2b;
+      text-shadow:
+        1px 1px 2px rgba(255 255 255 / 0.8);
+      font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
     }
     .hero-text h1 {
       font-size: 2.8rem;
+      font-weight: 800;
       line-height: 1.1;
-      margin-bottom: 0.5rem;
-      color: #ffaaff;
-      text-shadow:
-        0 0 8px #ff55ff,
-        0 0 20px #ff33ff,
-        0 0 40px #ff00ff;
+      margin-bottom: 1rem;
+      letter-spacing: 0.04em;
     }
     .hero-text p {
       font-size: 1.2rem;
       font-weight: 500;
-      margin-bottom: 2.2rem;
-      color: #ff99ff;
-      text-shadow: 0 0 4px #ff33ff;
-      line-height: 1.3;
+      margin-bottom: 2rem;
+      line-height: 1.4;
     }
-
+    .hero-text button {
+      background-color: #836953;
+      border: none;
+      padding: 0.85rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #fff7e6;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(131, 105, 83, 0.5);
+    }
+    .hero-text button:hover {
+      background-color: #a28f6f;
+      box-shadow: 0 6px 18px rgba(131, 105, 83, 0.7);
+    }
     /* Services */
     section.services h2 {
-      font-family: 'Share Tech Mono', monospace;
       font-size: 2rem;
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 2rem;
-      color: #ffaaff;
+      color: #4a3f2b;
       text-align: center;
-      text-shadow:
-        0 0 10px #ff33ff,
-        0 0 20px #ff00ff;
+      font-family: 'Segoe UI Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      letter-spacing: 0.06em;
     }
     .service-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.6rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
     }
     .service-item {
-      background-color: #5a005c;
-      border-radius: 14px;
-      padding: 1.4rem 2rem;
+      background-color: #ece5da;
+      border-radius: 12px;
+      padding: 1.8rem 2rem;
       font-weight: 700;
-      color: #ffc4ff;
+      color: #4a3f2b;
       display: flex;
       align-items: center;
       gap: 1.2rem;
-      box-shadow:
-        0 0 10px #ff00ff,
-        0 0 20px #ff66ff;
-      cursor: default;
-      font-family: 'Share Tech Mono', monospace;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
       transition: box-shadow 0.3s ease;
-      user-select: none;
+      cursor: default;
+      font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
     }
     .service-item:hover {
-      box-shadow:
-        0 0 20px #ff00ff,
-        0 0 40px #ff66ff;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.15);
     }
     .service-item svg {
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       flex-shrink: 0;
-      fill: #ffaaff;
-      filter: drop-shadow(0 0 3px #ff33ff);
+      fill: #4a3f2b;
     }
-
     /* Contact */
     section.contact {
-      margin-top: 4rem;
-      background-color: #5a005c;
-      padding: 2rem 2rem;
+      margin-top: 5rem;
+      background-color: #ece5da;
+      padding: 2.5rem 3rem;
       border-radius: 14px;
-      box-shadow:
-        0 0 10px #ff00ff,
-        0 0 20px #ff66ff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
       max-width: 520px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      color: #ffc4ff;
-      font-family: 'Share Tech Mono', monospace;
+      color: #4a3f2b;
+      font-family: 'Segoe UI Semibold', Tahoma, Geneva, Verdana, sans-serif;
     }
     section.contact h2 {
-      margin-bottom: 1rem;
-      font-weight: 900;
-      font-size: 1.8rem;
-      color: #ffaaff;
-      text-shadow:
-        0 0 10px #ff33ff,
-        0 0 20px #ff00ff;
+      margin-bottom: 1.6rem;
+      font-weight: 800;
+      font-size: 2rem;
+      color: #4a3f2b;
+      font-family: 'Segoe UI Black', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      letter-spacing: 0.05em;
     }
     section.contact p {
-      margin-bottom: 1.6rem;
-      font-weight: 600;
+      margin-bottom: 1.8rem;
+      font-weight: 500;
       font-size: 1.1rem;
       line-height: 1.5;
     }
     section.contact a {
-      color: #ff66ff;
-      font-weight: 700;
+      color: #836953;
+      font-weight: 600;
       font-size: 1.2rem;
       text-decoration: none;
-      text-shadow: 0 0 6px #ff33ff;
-      transition: color 0.3s ease;
     }
     section.contact a:hover {
-      color: #ff00ff;
-      text-shadow: 0 0 12px #ff00ff;
+      text-decoration: underline;
     }
-
     /* Responsive */
     @media (max-width: 650px) {
       header nav {
@@ -249,16 +224,15 @@
         margin-left: 0;
         flex-grow: 1;
         text-align: center;
-        padding: 0.6rem 1rem;
       }
       main {
-        margin: 100px 1rem 3rem;
+        margin: 120px 1rem 3rem;
       }
       .hero-text h1 {
         font-size: 2rem;
       }
       .hero-text p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       .service-list {
         grid-template-columns: 1fr;
@@ -271,8 +245,7 @@
     <div class="logo">NeonDonut</div>
     <nav>
       <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <button class="btn-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get a Free Consultation</button>
+      <button class="btn-cta" onclick="window.location.href='mailto:studio@neondonut.tech?subject=Request a Quote from NeonDonut'">Request a Quote</button>
     </nav>
   </header>
 
@@ -281,6 +254,7 @@
       <div class="hero-text">
         <h1>Transform Your Business with Expert Cloud & DevOps Solutions</h1>
         <p>Scalable, secure, and reliable cloud infrastructure tailored to your unique needs.</p>
+        <button onclick="window.location.href='mailto:studio@neondonut.tech?subject=Request a Quote from NeonDonut'">Request a Quote</button>
       </div>
     </section>
 
@@ -310,11 +284,11 @@
       </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section class="contact" id="contact">
       <h2>Ready to Elevate Your Cloud Journey?</h2>
       <p>Contact us for a personalized plan and pricing tailored to your business goals.</p>
       <p>Email: <a href="mailto:studio@neondonut.tech">studio@neondonut.tech</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener">www.linkedin.com/in/kajalsinhmar</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener">linkedin.com/in/kajalsinhmar</a></p>
       <p>GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener">github.com/kajalvaidhyula</a></p>
     </section>
   </main>
