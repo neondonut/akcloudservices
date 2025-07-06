@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NeonDonut - Professional Cloud & DevOps Solutions</title>
+  <title>NeonDonut - Expert Cloud & DevOps Solutions</title>
   <style>
     /* Reset and base */
     *, *::before, *::after {
@@ -12,12 +12,12 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f9f5ef url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"><circle cx="30" cy="30" r="1" fill="%23d7c5a3"/></svg>') repeat;
-      color: #4b4235;
+      background: #f5f3ec url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"><circle cx="30" cy="30" r="1" fill="%23cbd5e0"/></svg>') repeat;
+      color: #4a4237;
       scroll-behavior: smooth;
     }
     a {
-      color: #8c7d5a;
+      color: #a6825e;
       text-decoration: none;
     }
     a:hover {
@@ -27,49 +27,52 @@
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      background-color: #a1886f;
+      background-color: #a6825e;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1rem 2rem;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
     .logo {
-      cursor: default;
+      padding: 0;
+      margin-right: 2rem;
       display: flex;
       align-items: center;
     }
     .logo img {
-      height: 40px; /* Adjust as needed */
-      width: auto;
+      height: 45px; /* Increased logo size */
+      cursor: pointer;
+      display: block;
     }
     nav a {
-      color: #f5f1e8;
+      color: #fff9f1;
       margin-left: 2rem;
       font-weight: 600;
       font-size: 1rem;
       transition: color 0.3s ease;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      cursor: pointer;
     }
     nav a:hover {
-      color: #e2d8b9;
+      color: #d0b38a;
     }
     .btn-cta {
-      background-color: #f72585;
-      border: none;
-      padding: 0.5rem 1.4rem;
-      border-radius: 6px;
+      background-color: #a6825e;
+      border: 2px solid #fff9f1;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
       font-weight: 700;
-      color: white;
+      color: #fff9f1;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
       margin-left: 2rem;
       white-space: nowrap;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .btn-cta:hover {
-      background-color: #b91e65;
+      background-color: #fff9f1;
+      color: #a6825e;
+      border-color: #a6825e;
     }
     /* Main container */
     main {
@@ -92,12 +95,13 @@
       object-fit: cover;
       display: block;
       border-radius: 12px;
+      filter: brightness(0.8);
     }
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(245, 243, 236, 0.5); /* subtle creamy overlay */
       border-radius: 12px;
       pointer-events: none;
     }
@@ -106,15 +110,13 @@
       top: 40px;
       left: 30px;
       max-width: 520px;
-      color: #4b4235;
-      text-shadow:
-        2px 2px 4px rgba(255 255 255 / 0.9),
-        0 0 8px rgba(0 0 0 / 0.1);
+      color: #4a4237;
+      text-shadow: 1px 1px 3px rgba(255 255 255 / 0.9);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .hero-text h1 {
       font-size: 2.4rem;
-      font-weight: 700;
+      font-weight: 800;
       line-height: 1.1;
       margin-bottom: 0.5rem;
     }
@@ -128,8 +130,9 @@
       font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 1.8rem;
-      color: #4b4235;
+      color: #4a4237;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
     }
     .service-list {
       display: grid;
@@ -137,56 +140,56 @@
       gap: 1.4rem;
     }
     .service-item {
-      background-color: #ede3cf;
+      background-color: #f5f0e6;
       border-radius: 10px;
       padding: 1.2rem 1.6rem;
       font-weight: 700;
-      color: #5a503e;
+      color: #5b4e3b;
       display: flex;
       align-items: center;
       gap: 1rem;
-      box-shadow: 0 3px 7px rgba(0,0,0,0.07);
+      box-shadow: 0 3px 7px rgba(91, 78, 59, 0.2);
       transition: box-shadow 0.3s ease;
       cursor: default;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .service-item:hover {
-      box-shadow: 0 7px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 7px 15px rgba(91, 78, 59, 0.4);
     }
     .service-item svg {
       width: 26px;
       height: 26px;
       flex-shrink: 0;
-      fill: #5a503e;
+      fill: #5b4e3b;
     }
     /* Contact */
     section.contact {
       margin-top: 4rem;
       background-color: white;
-      padding: 1.5rem 2rem;
+      padding: 2rem 2rem;
       border-radius: 12px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-      max-width: 400px; /* smaller width */
+      max-width: 520px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      color: #4b4235;
+      color: #4a4237;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     section.contact h2 {
       margin-bottom: 1rem;
       font-weight: 800;
       font-size: 1.8rem;
-      color: #4b4235;
+      color: #4a4237;
     }
     section.contact p {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.6rem;
       font-weight: 500;
       font-size: 1rem;
       line-height: 1.4;
     }
     section.contact a {
-      color: #a1886f;
+      color: #a6825e;
       font-weight: 600;
       font-size: 1.1rem;
       text-decoration: none;
@@ -228,17 +231,17 @@
     </div>
     <nav>
       <a href="#services">Services</a>
-      <a href="#" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Request a Quote</a>
-      <button class="btn-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Request a Quote</button>
     </nav>
+    <button class="btn-cta" onclick="location.href='#contact'">Request a Quote</button>
   </header>
 
   <main>
     <section class="hero">
-      <img src="https://user-images.githubusercontent.com/91890463/191498310-6dd0e96c-7c9d-4309-863d-c2446a65db9b.jpg" alt="NeonDonut Hero" />
+      <img src="https://user-images.githubusercontent.com/91890463/191498310-6dd0e96c-7c9d-4309-863d-c2446a65db9b.jpg" alt="NeonDonut" />
       <div class="hero-text">
         <h1>Transform Your Business with Expert Cloud & DevOps Solutions</h1>
         <p>Scalable, secure, and reliable cloud infrastructure tailored to your unique needs.</p>
+        <!-- Removed Request a Quote button from hero -->
       </div>
     </section>
 
