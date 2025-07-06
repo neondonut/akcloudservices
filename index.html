@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NeonDonut - Expert Cloud & DevOps Solutions</title>
+  <title>NeonDonut - Professional Cloud & DevOps Solutions</title>
   <style>
     /* Reset and base */
     *, *::before, *::after {
@@ -12,12 +12,12 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f5f3ec url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"><circle cx="30" cy="30" r="1" fill="%23cbd5e0"/></svg>') repeat;
-      color: #4a4237;
+      background: #f9f5ef url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"><circle cx="30" cy="30" r="1" fill="%23d7c5a3"/></svg>') repeat;
+      color: #4b4235;
       scroll-behavior: smooth;
     }
     a {
-      color: #a6825e;
+      color: #8c7d5a;
       text-decoration: none;
     }
     a:hover {
@@ -27,48 +27,49 @@
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      background-color: #a6825e;
+      background-color: #a1886f;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1rem 2rem;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     .logo {
-      color: #fff9f1;
-      font-weight: 700;
-      font-size: 1.4rem;
-      letter-spacing: 0.02em;
       cursor: default;
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px; /* Adjust as needed */
+      width: auto;
     }
     nav a {
-      color: #fff9f1;
+      color: #f5f1e8;
       margin-left: 2rem;
       font-weight: 600;
       font-size: 1rem;
       transition: color 0.3s ease;
-      cursor: pointer;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     nav a:hover {
-      color: #d0b38a;
+      color: #e2d8b9;
     }
     .btn-cta {
-      background-color: #a6825e;
-      border: 2px solid #fff9f1;
-      padding: 0.5rem 1.2rem;
-      border-radius: 5px;
+      background-color: #f72585;
+      border: none;
+      padding: 0.5rem 1.4rem;
+      border-radius: 6px;
       font-weight: 700;
-      color: #fff9f1;
+      color: white;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: background-color 0.3s ease;
       margin-left: 2rem;
       white-space: nowrap;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .btn-cta:hover {
-      background-color: #fff9f1;
-      color: #a6825e;
-      border-color: #a6825e;
+      background-color: #b91e65;
     }
     /* Main container */
     main {
@@ -91,13 +92,12 @@
       object-fit: cover;
       display: block;
       border-radius: 12px;
-      filter: brightness(0.8);
     }
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(245, 243, 236, 0.5); /* subtle creamy overlay */
+      background: rgba(255, 255, 255, 0.4);
       border-radius: 12px;
       pointer-events: none;
     }
@@ -106,13 +106,15 @@
       top: 40px;
       left: 30px;
       max-width: 520px;
-      color: #4a4237;
-      text-shadow: 1px 1px 3px rgba(255 255 255 / 0.9);
+      color: #4b4235;
+      text-shadow:
+        2px 2px 4px rgba(255 255 255 / 0.9),
+        0 0 8px rgba(0 0 0 / 0.1);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .hero-text h1 {
       font-size: 2.4rem;
-      font-weight: 800;
+      font-weight: 700;
       line-height: 1.1;
       margin-bottom: 0.5rem;
     }
@@ -126,9 +128,8 @@
       font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 1.8rem;
-      color: #4a4237;
+      color: #4b4235;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
     }
     .service-list {
       display: grid;
@@ -136,59 +137,58 @@
       gap: 1.4rem;
     }
     .service-item {
-      background-color: #f5f0e6;
+      background-color: #ede3cf;
       border-radius: 10px;
       padding: 1.2rem 1.6rem;
       font-weight: 700;
-      color: #5b4e3b;
+      color: #5a503e;
       display: flex;
       align-items: center;
       gap: 1rem;
-      box-shadow: 0 3px 7px rgba(91, 78, 59, 0.2);
+      box-shadow: 0 3px 7px rgba(0,0,0,0.07);
       transition: box-shadow 0.3s ease;
       cursor: default;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .service-item:hover {
-      box-shadow: 0 7px 15px rgba(91, 78, 59, 0.4);
+      box-shadow: 0 7px 15px rgba(0,0,0,0.15);
     }
     .service-item svg {
       width: 26px;
       height: 26px;
       flex-shrink: 0;
-      fill: #5b4e3b;
+      fill: #5a503e;
     }
-    /* Contact - Smaller box */
+    /* Contact */
     section.contact {
       margin-top: 4rem;
       background-color: white;
-      padding: 1.2rem 1.6rem;
+      padding: 1.5rem 2rem;
       border-radius: 12px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-      max-width: 400px;
+      max-width: 400px; /* smaller width */
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      color: #4a4237;
+      color: #4b4235;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 0.9rem;
     }
     section.contact h2 {
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
       font-weight: 800;
-      font-size: 1.5rem;
-      color: #4a4237;
+      font-size: 1.8rem;
+      color: #4b4235;
     }
     section.contact p {
-      margin-bottom: 1.1rem;
+      margin-bottom: 1.2rem;
       font-weight: 500;
-      font-size: 0.9rem;
-      line-height: 1.3;
+      font-size: 1rem;
+      line-height: 1.4;
     }
     section.contact a {
-      color: #a6825e;
+      color: #a1886f;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       text-decoration: none;
     }
     section.contact a:hover {
@@ -218,25 +218,24 @@
       .service-list {
         grid-template-columns: 1fr;
       }
-      section.contact {
-        max-width: 90%;
-        font-size: 0.85rem;
-      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">NeonDonut</div>
+    <div class="logo">
+      <img src="assets/NeonDonut_wbg.png" alt="NeonDonut Logo" />
+    </div>
     <nav>
       <a href="#services">Services</a>
-      <a href="#contact">Request a Quote</a>
+      <a href="#" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Request a Quote</a>
+      <button class="btn-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Request a Quote</button>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <img src="https://user-images.githubusercontent.com/91890463/191498310-6dd0e96c-7c9d-4309-863d-c2446a65db9b.jpg" alt="NeonDonut" />
+      <img src="https://user-images.githubusercontent.com/91890463/191498310-6dd0e96c-7c9d-4309-863d-c2446a65db9b.jpg" alt="NeonDonut Hero" />
       <div class="hero-text">
         <h1>Transform Your Business with Expert Cloud & DevOps Solutions</h1>
         <p>Scalable, secure, and reliable cloud infrastructure tailored to your unique needs.</p>
