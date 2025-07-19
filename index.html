@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NeonDonut</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet" />
+  <title>NeonDonut - Expert Cloud & DevOps Solutions</title>
 
   <style>
     /* Reset */
@@ -15,293 +12,279 @@
       margin: 0; padding: 0;
     }
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #0d0d14;
-      color: #eee;
-      overflow-x: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('assets/bgi1.jpg'); /* Change this to your filename */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center center;
+      color: #4a4237;
       scroll-behavior: smooth;
+      min-height: 100vh;
     }
     a {
-      color: #6ee7b7;
+      color: #a6825e;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
     a:hover {
-      color: #34d399;
+      text-decoration: underline;
     }
-    /* Header */
+
+    /* Header with transparent background and blur */
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      height: 60px;
-      background: rgba(13,13,20,0.95);
+      background-color: rgba(255, 255, 255, 0.15); /* transparent white */
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 30px;
+      padding: 1rem 2rem;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
-      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    header .logo {
-      height: 40px;
+    .logo {
+      padding: 0;
+      margin-right: 2rem;
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 45px;
       cursor: pointer;
-      user-select: none;
+      display: block;
     }
     nav a {
-      margin-left: 24px;
+      color: #fff9f1;
+      margin-left: 2rem;
       font-weight: 600;
       font-size: 1rem;
+      transition: color 0.3s ease;
       cursor: pointer;
-      letter-spacing: 0.05em;
-      position: relative;
+      text-shadow: 0 0 4px rgba(0,0,0,0.5);
     }
-    nav a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background: #6ee7b7;
-      transition: width 0.3s ease;
-      border-radius: 2px;
+    nav a:hover {
+      color: #d0b38a;
     }
-    nav a:hover::after {
-      width: 100%;
-    }
-    nav a.cta {
-      padding: 10px 18px;
-      background: #6ee7b7;
-      color: #0d0d14;
-      border-radius: 24px;
+    .btn-cta {
+      background-color: #a6825e;
+      border: 2px solid #fff9f1;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
       font-weight: 700;
+      color: #fff9f1;
+      cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease;
+      margin-left: 2rem;
+      white-space: nowrap;
+      text-shadow: 0 0 4px rgba(0,0,0,0.5);
     }
-    nav a.cta:hover {
-      background: #34d399;
-      color: #fff;
+    .btn-cta:hover {
+      background-color: #fff9f1;
+      color: #a6825e;
+      border-color: #a6825e;
     }
-    /* Container */
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 20px;
+
+    /* Main container */
+    main {
+      max-width: 960px;
+      margin: 100px auto 3rem;
+      padding: 0 1rem;
+      background: rgba(255 255 255 / 0.75); /* subtle white translucent background */
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      color: #4a4237;
     }
+
     /* Hero */
     .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 80px;
-      gap: 60px;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+      height: 380px;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+      filter: brightness(0.85);
     }
     .hero-text {
-      flex: 1;
-      max-width: 600px;
+      position: absolute;
+      top: 40px;
+      left: 30px;
+      max-width: 520px;
+      color: #4a4237;
+      text-shadow: 1px 1px 3px rgba(255 255 255 / 0.9);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .hero-text h1 {
+      font-size: 2.4rem;
       font-weight: 800;
-      font-size: 3.8rem;
       line-height: 1.1;
-      color: #6ee7b7;
-      filter: drop-shadow(0 0 10px #6ee7b7);
-      margin-bottom: 24px;
+      margin-bottom: 0.5rem;
     }
     .hero-text p {
-      font-weight: 400;
-      font-size: 1.2rem;
-      color: #cbd5e1;
-      margin-bottom: 40px;
-      line-height: 1.5;
-    }
-    .hero-text button {
-      background: #6ee7b7;
-      border: none;
-      border-radius: 30px;
-      padding: 14px 36px;
-      font-weight: 700;
       font-size: 1.1rem;
-      color: #0d0d14;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(110, 231, 183, 0.5);
-      transition: background-color 0.3s ease;
-    }
-    .hero-text button:hover {
-      background: #34d399;
-    }
-    .hero-image {
-      flex: 1;
-      max-width: 550px;
-      position: relative;
-    }
-    .hero-image img {
-      width: 100%;
-      border-radius: 24px;
-      box-shadow: 0 10px 40px rgba(110, 231, 183, 0.6);
+      font-weight: 500;
+      margin-bottom: 1.8rem;
     }
 
-    /* Sections */
-    section {
-      padding: 100px 0;
+    /* Services */
+    section.services h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.8rem;
+      color: #4a4237;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
     }
-    section h2 {
-      font-weight: 800;
-      font-size: 2.6rem;
-      margin-bottom: 16px;
-      color: #6ee7b7;
-      filter: drop-shadow(0 0 8px #6ee7b7);
-    }
-    section p {
-      font-weight: 400;
-      font-size: 1.15rem;
-      max-width: 650px;
-      margin: 0 auto 48px;
-      color: #cbd5e1;
-      line-height: 1.6;
-    }
-
-    /* Services Grid */
-    .services-grid {
+    .service-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-      max-width: 900px;
-      margin: 0 auto;
+      gap: 1.4rem;
     }
     .service-item {
-      background: #172a1d;
-      border-radius: 20px;
-      padding: 24px 20px;
-      color: #a0f6c7;
-      box-shadow: 0 0 15px rgba(110, 231, 183, 0.4);
+      background-color: #f5f0e6;
+      border-radius: 10px;
+      padding: 1.2rem 1.6rem;
+      font-weight: 700;
+      color: #5b4e3b;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 3px 7px rgba(91, 78, 59, 0.2);
+      transition: box-shadow 0.3s ease;
       cursor: default;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .service-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 40px #34d399;
+      box-shadow: 0 7px 15px rgba(91, 78, 59, 0.4);
     }
     .service-item svg {
-      width: 36px;
-      height: 36px;
-      margin-bottom: 12px;
-      fill: #6ee7b7;
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      fill: #5b4e3b;
     }
+
     /* Contact */
-    .contact-info {
-      background: #172a1d;
-      border-radius: 16px;
-      padding: 30px 20px;
-      max-width: 460px;
-      margin: 0 auto;
-      box-shadow: 0 0 30px rgba(110, 231, 183, 0.6);
-      color: #a0f6c7;
-      font-weight: 600;
-      font-size: 1.05rem;
-      line-height: 1.5;
+    section.contact {
+      margin-top: 4rem;
+      padding: 2rem 2rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      color: #4a4237;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    .contact-info a {
-      color: #34d399;
+    section.contact h2 {
+      margin-bottom: 1rem;
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: #4a4237;
+    }
+    section.contact p {
+      margin-bottom: 1.6rem;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    section.contact a {
+      color: #a6825e;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+    section.contact a:hover {
       text-decoration: underline;
-      font-weight: 700;
     }
 
     /* Responsive */
-    @media (max-width: 850px) {
-      .hero {
-        flex-direction: column-reverse;
-        padding-top: 60px;
+    @media (max-width: 650px) {
+      header nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
       }
-      .hero-text, .hero-image {
-        max-width: 100%;
+      header .btn-cta {
+        margin-left: 0;
+        flex-grow: 1;
+        text-align: center;
+      }
+      main {
+        margin: 120px 1rem 3rem;
       }
       .hero-text h1 {
-        font-size: 2.8rem;
+        font-size: 1.8rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+      .service-list {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <img src="assets/NeonDonut_wbg.png" alt="NeonDonut Logo" class="logo" />
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#contact" class="cta">Request a Quote</a>
-  </nav>
-</header>
-
-<main>
-  <section class="hero container">
-    <div class="hero-text">
-      <h1>Transform Your Business with Expert Cloud & DevOps Solutions</h1>
-      <p>Scalable, secure, and reliable cloud infrastructure tailored to your unique needs.</p>
-      <button>Request a Quote</button>
+  <header>
+    <div class="logo">
+      <img src="assets/NeonDonut_wbg.png" alt="NeonDonut Logo" />
     </div>
-    <div class="hero-image">
-      <img src="https://user-images.githubusercontent.com/91890463/191498310-6dd0e96c-7c9d-4309-863d-c2446a65db9b.jpg" alt="Hero Image" />
-    </div>
-  </section>
+    <nav>
+      <a href="#services">Services</a>
+    </nav>
+    <button class="btn-cta" onclick="location.href='#contact'">Request a Quote</button>
+  </header>
 
-  <section id="services">
-    <h2>What We Offer</h2>
-    <p>Custom cloud and DevOps services designed to fit your business.</p>
-    <div class="services-grid">
-      <div class="service-item" title="Software Development & Consulting">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.371 0 0 5.371 0 12c0 6.628 5.371 12 12 12 6.629 0 12-5.372 12-12 0-6.629-5.371-12-12-12zm0 21.273c-1.345 0-2.565-.456-3.566-1.223l1.155-1.143c.597.422 1.351.669 2.411.669 1.526 0 2.665-.719 2.665-1.927 0-1.133-.93-1.607-2.163-2.3-1.61-.905-2.68-1.975-2.68-3.425 0-1.75 1.335-3.02 3.741-3.02 1.404 0 2.42.467 3.202 1.084l-1.178 1.18c-.506-.337-1.015-.534-1.95-.534-1.379 0-2.24.848-2.24 1.713 0 1.093 1.04 1.517 2.277 2.15 1.58.828 2.68 1.79 2.68 3.55 0 1.924-1.675 3.225-4.162 3.225z"/></svg>
-        Software Development & Consulting
+  <main>
+    <section class="hero">
+      <img src="https://user-images.githubusercontent.com/91890463/191498310-6dd0e96c-7c9d-4309-863d-c2446a65db9b.jpg" alt="NeonDonut" />
+      <div class="hero-text">
+        <h1>Transform Your Business with Expert Cloud & DevOps Solutions</h1>
+        <p>Scalable, secure, and reliable cloud infrastructure tailored to your unique needs.</p>
       </div>
-      <div class="service-item" title="DevOps Automation & CI/CD Pipelines">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.59 2 4 5.59 4 10c0 1.52.58 2.92 1.53 3.98l-1.46 4.84c-.1.33.02.67.29.88.25.19.59.22.87.07l4.15-2.39c.94.56 2.03.87 3.18.87 4.41 0 8-3.59 8-8s-3.59-8-8-8zm0 14c-.71 0-1.38-.2-1.96-.55l1.57-2.41-1.92-.56-.73-2.21c-.05-.15-.04-.31.05-.44.07-.11.19-.18.32-.18h.18l1.93.58 1.61-1.78c.06-.06.14-.1.23-.11.13-.01.27.06.36.18l2.3 3.56c.02.03.04.07.04.11 0 .11-.09.2-.2.2h-1.91l-1.71 2.63c-.52.28-1.11.44-1.73.44z"/></svg>
-        DevOps Automation & CI/CD Pipelines
-      </div>
-      <div class="service-item" title="Cloud Infrastructure Setup & Management">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5v14h18V5H3zm9 13a5.5 5.5 0 01-5.5-5.5A5.5 5.5 0 0112 7a5.5 5.5 0 015.5 5.5A5.5 5.5 0 0112 18zm0-9a3.5 3.5 0 00-3.5 3.5A3.5 3.5 0 0012 16a3.5 3.5 0 003.5-3.5A3.5 3.5 0 0012 9z"/></svg>
-        Cloud Infrastructure Setup & Management
-      </div>
-      <div class="service-item" title="Application Monitoring & Support">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 00-3.3 17.31c.52.09.71-.23.71-.51 0-.25-.01-.91-.01-1.79-2.89.63-3.49-1.39-3.49-1.39-.48-1.22-1.17-1.54-1.17-1.54-.96-.66.07-.65.07-.65 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.47 1.15 3.07.88.1-.69.37-1.15.68-1.41-2.31-.26-4.74-1.15-4.74-5.12 0-1.13.39-2.06 1.03-2.79-.11-.25-.45-1.29.1-2.68 0 0 .84-.27 2.75 1.05a9.52 9.52 0 015 0c1.91-1.32 2.75-1.05 2.75-1.05.56 1.39.22 2.43.11 2.68.64.73 1.03 1.66 1.03 2.79 0 3.98-2.44 4.86-4.76 5.11.38.33.72.98.72 1.98 0 1.43-.01 2.59-.01 2.94 0 .28.19.61.72.51A9 9 0 0012 3z"/></svg>
-        Application Monitoring & Support
-      </div>
-      <div class="service-item" title="Training and Knowledge Transfer">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 4v16H6V4h12zm0-2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM9 15h6v2H9v-2zm0-5h6v2H9V10z"/></svg>
-        Training and Knowledge Transfer
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <div class="contact-info">
+    <section id="services" class="services">
+      <h2>What We Offer</h2>
+      <div class="service-list">
+        <div class="service-item" title="Software Development & Consulting">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.371 0 0 5.371 0 12c0 6.628 5.371 12 12 12 6.629 0 12-5.372 12-12 0-6.629-5.371-12-12-12zm0 21.273c-1.345 0-2.565-.456-3.566-1.223l1.155-1.143c.597.422 1.351.669 2.411.669 1.526 0 2.665-.719 2.665-1.927 0-1.133-.93-1.607-2.163-2.3-1.61-.905-2.68-1.975-2.68-3.425 0-1.75 1.335-3.02 3.741-3.02 1.404 0 2.42.467 3.202 1.084l-1.178 1.18c-.506-.337-1.015-.534-1.95-.534-1.379 0-2.24.848-2.24 1.713 0 1.093 1.04 1.517 2.277 2.15 1.58.828 2.68 1.79 2.68 3.55 0 1.924-1.675 3.225-4.162 3.225z"/></svg>
+          Software Development & Consulting
+        </div>
+        <div class="service-item" title="DevOps Automation & CI/CD Pipelines">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.59 2 4 5.59 4 10c0 1.52.58 2.92 1.53 3.98l-1.46 4.84c-.1.33.02.67.29.88.25.19.59.22.87.07l4.15-2.39c.94.56 2.03.87 3.18.87 4.41 0 8-3.59 8-8s-3.59-8-8-8zm0 14c-.71 0-1.38-.2-1.96-.55l1.57-2.41-1.92-.56-.73-2.21c-.05-.15-.04-.31.05-.44.07-.11.19-.18.32-.18h.18l1.93.58 1.61-1.78c.06-.06.14-.1.23-.11.13-.01.27.06.36.18l2.3 3.56c.02.03.04.07.04.11 0 .11-.09.2-.2.2h-1.91l-1.71 2.63c-.52.28-1.11.44-1.73.44z"/></svg>
+          DevOps Automation & CI/CD Pipelines
+        </div>
+        <div class="service-item" title="Cloud Infrastructure Setup & Management">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5v14h18V5H3zm9 13a5.5 5.5 0 01-5.5-5.5A5.5 5.5 0 0112 7a5.5 5.5 0 015.5 5.5A5.5 5.5 0 0112 18zm0-9a3.5 3.5 0 00-3.5 3.5A3.5 3.5 0 0012 16a3.5 3.5 0 003.5-3.5A3.5 3.5 0 0012 9z"/></svg>
+          Cloud Infrastructure Setup & Management
+        </div>
+        <div class="service-item" title="Application Monitoring & Support">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 00-3.3 17.31c.52.09.71-.23.71-.51 0-.25-.01-.91-.01-1.79-2.89.63-3.49-1.39-3.49-1.39-.48-1.22-1.17-1.54-1.17-1.54-.96-.66.07-.65.07-.65 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.47 1.15 3.07.88.1-.69.37-1.15.68-1.41-2.31-.26-4.74-1.15-4.74-5.12 0-1.13.39-2.06 1.03-2.79-.11-.25-.45-1.29.1-2.68 0 0 .84-.27 2.75 1.05a9.52 9.52 0 015 0c1.91-1.32 2.75-1.05 2.75-1.05.56 1.39.22 2.43.11 2.68.64.73 1.03 1.66 1.03 2.79 0 3.98-2.44 4.86-4.76 5.11.38.33.72.98.72 1.98 0 1.43-.01 2.59-.01 2.94 0 .28.19.61.72.51A9 9 0 0012 3z"/></svg>
+          Application Monitoring & Support
+        </div>
+        <div class="service-item" title="Training and Knowledge Transfer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 4v16H6V4h12zm0-2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM9 15h6v2H9v-2zm0-5h6v2H9V10z"/></svg>
+          Training and Knowledge Transfer
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
       <h2>Ready to Elevate Your Cloud Journey?</h2>
       <p>Contact us for a personalized plan and pricing tailored to your business goals.</p>
       <p>Email: <a href="mailto:studio@neondonut.tech">studio@neondonut.tech</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/company/neondonut" target="_blank" rel="noopener">www.linkedin.com/company/neondonut</a></p>
-      <p>GitHub: <a href="https://github.com/neondonut" target="_blank" rel="noopener">github.com/neondonut</a></p>
-    </div>
-  </section>
-</main>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-cXbB3FvMl7joTdcAy8uNVk7TOkS1vLHPTs7gVtEZl9d6y1QOi50d61O8XLe6voLuVe9mf3y3ISr9yiAs7zYN/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-N7CJ1LvUVHaUrVr3UqHq8QH3tjArUva6D7Ufjz4P1T3Em7QvBu6XZfxsGJX2KLfaGkwWz0Tpo7HCxiJh/HW9Xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Animate hero text and button
-  gsap.from(".hero-text h1", {
-    y: 80,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  });
-  gsap.from(".hero-text p", {
-    y: 80,
-    opacity: 0,
-    delay: 0.3,
-    duration: 1,
-    ease: "power3.out"
-  });
-  gsap.from(".hero
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/kajalsinhmar" target="_blank" rel="noopener">www.linkedin.com/in/kajalsinhmar</a></p>
+      <p>GitHub: <a href="https://github.com/kajalvaidhyula" target="_blank" rel="noopener">github.com/kajalvaidhyula</a></p>
+    </section>
+  </main>
+</body>
+</html>
