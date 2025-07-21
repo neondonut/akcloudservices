@@ -328,4 +328,26 @@
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
+  // Animate hero text and button on load
+  gsap.from(".hero-text h1", {
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+  gsap.from(".hero-text p", {
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    delay: 0.3,
+    ease: "power3.out"
+  });
+  gsap.from(".hero-text button", {
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    delay: 0.6,
+    ease: "power3.out"
+  });
+
   // Animate hero
