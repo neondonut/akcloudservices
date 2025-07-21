@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Magic Style Website - GSAP Scroll Animations</title>
+  <title>NeonDonut - Magic Style Clone</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet" />
@@ -16,40 +16,46 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0d0d14;
-      color: #eee;
+      background-color: #1E3B30;
+      background-image: url('assets/Background_green.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #e4f2f0;
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
     a {
-      color: #6ee7b7;
+      color: #a3f7c1;
       text-decoration: none;
       transition: color 0.3s ease;
     }
     a:hover {
-      color: #34d399;
+      color: #5de3a0;
     }
     /* Header */
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
       height: 60px;
-      background: rgba(13,13,20,0.95);
+      background: rgba(20, 58, 45, 0.8);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 30px;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.7);
       backdrop-filter: blur(8px);
     }
     header .logo {
-      height: 40px;
+      height: 36px;
       cursor: pointer;
       user-select: none;
+      filter: drop-shadow(0 0 2px #58f7c2);
     }
     nav a {
-      margin-left: 24px;
+      margin-left: 30px;
       font-weight: 600;
       font-size: 1rem;
       cursor: pointer;
@@ -59,43 +65,48 @@
     nav a::after {
       content: '';
       position: absolute;
-      bottom: -4px;
+      bottom: -5px;
       left: 0;
       width: 0%;
       height: 2px;
-      background: #6ee7b7;
-      transition: width 0.3s ease;
+      background: #58f7c2;
       border-radius: 2px;
+      transition: width 0.3s ease;
     }
     nav a:hover::after {
       width: 100%;
     }
     nav a.cta {
-      padding: 10px 18px;
-      background: #6ee7b7;
-      color: #0d0d14;
-      border-radius: 24px;
+      padding: 10px 22px;
+      background: #58f7c2;
+      color: #1E3B30;
+      border-radius: 32px;
       font-weight: 700;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
     nav a.cta:hover {
-      background: #34d399;
+      background: #3bc89c;
       color: #fff;
     }
+
     /* Container */
     .container {
-      max-width: 1140px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 24px;
     }
-    /* Hero */
+
+    /* Hero Section */
     .hero {
       height: 100vh;
+      padding-top: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 80px;
-      gap: 60px;
+      gap: 50px;
+      flex-wrap: wrap;
+      color: #def3ec;
+      text-shadow: 0 0 12px #58f7c2;
     }
     .hero-text {
       flex: 1;
@@ -103,123 +114,149 @@
     }
     .hero-text h1 {
       font-weight: 800;
-      font-size: 3.8rem;
+      font-size: 4rem;
       line-height: 1.1;
-      color: #6ee7b7;
-      filter: drop-shadow(0 0 10px #6ee7b7);
-      margin-bottom: 24px;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(60px);
     }
     .hero-text p {
       font-weight: 400;
-      font-size: 1.2rem;
-      color: #cbd5e1;
+      font-size: 1.35rem;
       margin-bottom: 40px;
-      line-height: 1.5;
+      line-height: 1.4;
+      opacity: 0;
+      transform: translateY(60px);
     }
     .hero-text button {
-      background: #6ee7b7;
-      border: none;
-      border-radius: 30px;
-      padding: 14px 36px;
+      padding: 16px 48px;
       font-weight: 700;
-      font-size: 1.1rem;
-      color: #0d0d14;
+      font-size: 1.15rem;
+      border-radius: 50px;
+      border: none;
       cursor: pointer;
-      box-shadow: 0 6px 20px rgba(110, 231, 183, 0.5);
+      background: #58f7c2;
+      color: #1E3B30;
+      box-shadow: 0 10px 40px rgba(88, 247, 194, 0.6);
+      opacity: 0;
+      transform: translateY(60px);
       transition: background-color 0.3s ease;
     }
     .hero-text button:hover {
-      background: #34d399;
+      background: #3bc89c;
+      color: #fff;
+      box-shadow: 0 10px 50px rgba(59, 200, 156, 0.8);
     }
     .hero-image {
       flex: 1;
-      max-width: 550px;
-      position: relative;
+      max-width: 500px;
+      opacity: 0;
+      transform: translateX(100px);
+      filter: drop-shadow(0 0 25px #58f7c2);
+      border-radius: 32px;
     }
     .hero-image img {
       width: 100%;
-      border-radius: 24px;
-      box-shadow: 0 10px 40px rgba(110, 231, 183, 0.6);
+      border-radius: 32px;
     }
 
     /* Sections */
     section {
       padding: 100px 0;
+      color: #d3eee5;
       text-align: center;
     }
     section h2 {
       font-weight: 800;
-      font-size: 2.6rem;
-      margin-bottom: 16px;
-      color: #6ee7b7;
-      filter: drop-shadow(0 0 8px #6ee7b7);
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #58f7c2;
     }
     section p {
-      font-weight: 400;
-      font-size: 1.15rem;
-      max-width: 650px;
+      max-width: 700px;
       margin: 0 auto 48px;
-      color: #cbd5e1;
-      line-height: 1.6;
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      text-shadow: 0 0 6px rgba(0,0,0,0.15);
     }
 
-    /* Services Grid */
+    /* Services grid */
     .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 36px;
     }
     .service-item {
-      background: #172a1d;
-      border-radius: 20px;
-      padding: 24px 20px;
-      color: #a0f6c7;
-      box-shadow: 0 0 15px rgba(110, 231, 183, 0.4);
+      background: #214537;
+      border-radius: 24px;
+      padding: 32px 24px;
+      box-shadow: 0 0 25px rgba(88, 247, 194, 0.5);
       cursor: default;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      color: #a3f7c1;
+      font-weight: 600;
+      text-align: left;
     }
     .service-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 40px #34d399;
+      box-shadow: 0 0 50px #3bc89c;
+      transform: translateY(-8px);
     }
     .service-item svg {
-      width: 36px;
-      height: 36px;
-      margin-bottom: 12px;
-      fill: #6ee7b7;
+      width: 40px;
+      height: 40px;
+      fill: #58f7c2;
+      margin-bottom: 18px;
     }
+
     /* Contact */
-    .contact-info {
-      background: #172a1d;
-      border-radius: 16px;
-      padding: 30px 20px;
-      max-width: 460px;
+    #contact .contact-info {
+      max-width: 540px;
       margin: 0 auto;
-      box-shadow: 0 0 30px rgba(110, 231, 183, 0.6);
-      color: #a0f6c7;
+      background: #214537;
+      border-radius: 24px;
+      padding: 40px 32px;
+      box-shadow: 0 0 40px rgba(88, 247, 194, 0.6);
       font-weight: 600;
-      font-size: 1.05rem;
-      line-height: 1.5;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #a3f7c1;
     }
-    .contact-info a {
-      color: #34d399;
-      text-decoration: underline;
+    #contact .contact-info a {
+      color: #3bc89c;
       font-weight: 700;
+      text-decoration: underline;
     }
 
     /* Responsive */
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
       .hero {
-        flex-direction: column-reverse;
-        padding-top: 60px;
+        flex-direction: column;
+        text-align: center;
       }
       .hero-text, .hero-image {
         max-width: 100%;
       }
       .hero-text h1 {
-        font-size: 2.8rem;
+        font-size: 3rem;
+      }
+    }
+    @media (max-width: 480px) {
+      nav a {
+        margin-left: 15px;
+        font-size: 0.95rem;
+      }
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+      .hero-text button {
+        padding: 12px 36px;
+        font-size: 1rem;
       }
     }
   </style>
@@ -242,13 +279,13 @@
       <button>Request a Quote</button>
     </div>
     <div class="hero-image">
-      <img src="assets/A_website_hero_section_digital_illustration_depict.png" alt="Hero Image" />
+      <img src="assets/tbg-hero.png" alt="Hero Image" />
     </div>
   </section>
 
   <section id="services">
     <h2>What We Offer</h2>
-    <p>Custom cloud and DevOps services designed to fit your business.</p>
+    <p>Custom cloud and DevOps services designed to fit your business needs.</p>
     <div class="services-grid">
       <div class="service-item" title="Software Development & Consulting">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.371 0 0 5.371 0 12c0 6.628 5.371 12 12 12 6.629 0 12-5.372 12-12 0-6.629-5.371-12-12-12zm0 21.273c-1.345 0-2.565-.456-3.566-1.223l1.155-1.143c.597.422 1.351.669 2.411.669 1.526 0 2.665-.719 2.665-1.927 0-1.133-.93-1.607-2.163-2.3-1.61-.905-2.68-1.975-2.68-3.425 0-1.75 1.335-3.02 3.741-3.02 1.404 0 2.42.467 3.202 1.084l-1.178 1.18c-.506-.337-1.015-.534-1.95-.534-1.379 0-2.24.848-2.24 1.713 0 1.093 1.04 1.517 2.277 2.15 1.58.828 2.68 1.79 2.68 3.55 0 1.924-1.675 3.225-4.162 3.225z"/></svg>
@@ -284,24 +321,11 @@
   </section>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-cXbB3FvMl7joTdcAy8uNVk7TOkS1vLHPTs7gVtEZl9d6y1QOi50d61O8XLe6voLuVe9mf3y3ISr9yiAs7zYN/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-N7CJ1LvUVHaUrVr3UqHq8QH3tjArUva6D7Ufjz4P1T3Em7QvBu6XZfxsGJX2KLfaGkwWz0Tpo7HCxiJh/HW9Xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- GSAP + ScrollTrigger CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
-  // Animate hero text and button
-  gsap.from(".hero-text h1", {
-    y: 80,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  });
-  gsap.from(".hero-text p", {
-    y: 80,
-    opacity: 0,
-    delay: 0.3,
-    duration: 1,
-    ease: "power3.out"
-  });
-  gsap.from(".hero
+  // Animate hero
