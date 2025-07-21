@@ -96,10 +96,10 @@
       padding: 0 24px;
     }
 
-    /* Hero Section with overlay */
+    /* Hero Section WITHOUT overlay */
     .hero {
       position: relative;
-      background: rgba(30, 59, 48, 0.7);
+      /* removed background rgba */
       border-radius: 32px;
       padding: 40px;
       box-shadow: 0 0 60px rgba(0,0,0,0.8);
@@ -114,19 +114,12 @@
       margin-top: 60px; /* to offset fixed header */
       min-height: 400px;
     }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.4);
-      border-radius: 32px;
-      z-index: 1;
-    }
+    /* Removed .hero::before overlay */
+
     .hero-text {
       position: relative;
       z-index: 2;
       max-width: 600px;
-      /* No opacity or transform so visible immediately */
     }
     .hero-text h1 {
       font-weight: 800;
@@ -163,7 +156,6 @@
       max-width: 500px;
       border-radius: 32px;
       filter: drop-shadow(0 0 25px #58f7c2);
-      /* No opacity or transform so visible immediately */
     }
     .hero-image img {
       width: 100%;
