@@ -96,25 +96,24 @@
       padding: 0 24px;
     }
 
-    /* Hero Section WITHOUT overlay */
+    /* Hero Section: NO background, no shadow, fully transparent */
     .hero {
       position: relative;
-      /* removed background rgba */
-      border-radius: 32px;
       padding: 40px;
-      box-shadow: 0 0 60px rgba(0,0,0,0.8);
-      height: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 50px;
       flex-wrap: wrap;
       color: #def3ec;
-      overflow: hidden;
+      overflow: visible;
       margin-top: 60px; /* to offset fixed header */
       min-height: 400px;
+      background: none !important;
+      box-shadow: none !important;
+      border-radius: 0;
     }
-    /* Removed .hero::before overlay */
+    /* No ::before overlay */
 
     .hero-text {
       position: relative;
